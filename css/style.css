@@ -6,7 +6,8 @@
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/work-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../assets/fonts/static/work-sans-v19-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* work-sans-600 - latin */
 @font-face {
@@ -14,7 +15,8 @@
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  src: url("../fonts/work-sans-v19-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../assets/fonts/static/work-sans-v19-latin-600.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* work-sans-700 - latin */
 @font-face {
@@ -22,7 +24,8 @@
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/work-sans-v19-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../assets/fonts/static/work-sans-v19-latin-700.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 :root {
@@ -56,6 +59,7 @@
   --space-350: 1.75rem;
   --space-325: 1.625rem;
   --space-300: 1.5rem;
+  --space-200: 1rem;
   --space-250: 1.25rem;
   --space-175: 0.875rem;
 
@@ -94,7 +98,30 @@ main {
 
 .accordion {
   background-color: var(--white);
+  border-radius: var(--border-radius-100);
   display: flex;
   flex-direction: column;
+  gap: var(--space-300);
+  max-width: 37.5rem;
+  padding: var(--space-325) var(--space-300) var(--space-300);
   z-index: 1;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  gap: 0 var(--space-300);
+}
+
+.header__icon {
+  display: block;
+  object-fit: cover;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.header__title {
+  font-size: var(--font-size-400);
+  font-weight: 700;
+  line-height: var(--line-height-110);
 }
