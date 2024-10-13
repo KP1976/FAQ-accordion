@@ -105,6 +105,7 @@ main {
   max-width: 37.5rem;
   padding: var(--space-325) var(--space-300) var(--space-300);
   z-index: 1;
+  min-width: 20.438rem;
 }
 
 .header {
@@ -124,4 +125,47 @@ main {
   font-size: var(--font-size-400);
   font-weight: 700;
   line-height: var(--line-height-110);
+}
+
+.accordion__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-250);
+}
+
+.accordion__item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion__question {
+  font-weight: 600;
+  line-height: var(--line-height-120);
+  max-width: 13.275rem;
+}
+
+.accordion__answer {
+  display: none;
+}
+
+.accordion__button {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+
+.question-divider {
+  background-color: var(--purple-light);
+  height: 1px;
+}
+
+.attribution {
+  font-size: var(--font-size-175);
+  padding: 1rem;
+  text-align: center;
+}
+
+.attribution__link {
+  color: var(--purple-dark);
+  font-weight: 700;
 }
