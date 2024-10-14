@@ -77,15 +77,27 @@ body {
   font-family: var(--font-name), sans-serif;
   letter-spacing: var(--letter-spacing-0px);
   min-height: 100dvh;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.background-image {
-  display: block;
+.container {
+  height: clamp(20vh, calc(232 / 375 * 100vw), 232px);
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.background-image-mobile {
+  height: 100%;
+  left: 0;
   object-fit: cover;
-  max-width: 100%;
   position: absolute;
   top: 0;
+  width: 100%;
+}
+
+.background-image-desktop {
+  display: none;
 }
 
 main {
@@ -93,6 +105,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100dvh;
   padding: 0 var(--space-300);
   width: 100%;
 }
@@ -108,6 +121,7 @@ main {
   padding: var(--space-325) var(--space-300) var(--space-300);
   z-index: 1;
   min-width: 20.438rem;
+  width: 100%;
 }
 
 .header {
@@ -172,4 +186,24 @@ main {
 .attribution__link {
   color: var(--purple-dark);
   font-weight: 700;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    height: 20rem;
+  }
+
+  .background-image-mobile {
+    display: none;
+  }
+
+  .background-image-desktop {
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
