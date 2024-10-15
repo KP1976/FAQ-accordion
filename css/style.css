@@ -165,9 +165,25 @@ main {
   display: none;
 }
 
+.accordion__answer.open {
+  display: block;
+}
+
 .accordion__button {
   height: 1.875rem;
   width: 1.875rem;
+}
+
+.icon-minus {
+  display: none;
+}
+
+.accordion__item.open .icon-minus {
+  display: block;
+}
+
+.accordion__item.open .icon-plus {
+  display: none;
 }
 
 .question-divider {
