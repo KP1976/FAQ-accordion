@@ -51,16 +51,17 @@
   --line-height-110: 1.1;
 
   --letter-spacing-0px: 0em;
-  --letter-spacing-1px: 1em;
+  --letter-spacing-1px: 0.0185em;
 
   /* SPACING */
   --space-500: 2.5rem;
+  --space-450: 2.25rem;
   --space-400: 2rem;
   --space-350: 1.75rem;
   --space-325: 1.625rem;
   --space-300: 1.5rem;
-  --space-200: 1rem;
   --space-250: 1.25rem;
+  --space-200: 1rem;
   --space-175: 0.875rem;
 
   /* BORDERS */
@@ -80,7 +81,7 @@ body {
   justify-content: flex-start;
 }
 
-.container {
+.image-container {
   height: clamp(20vh, calc(232 / 375 * 100vw), 232px);
   overflow: hidden;
   position: absolute;
@@ -175,7 +176,9 @@ main {
 
 .accordion__answer {
   color: var(--purple-gray);
+  font-size: var(--font-size-175);
   display: none;
+  line-height: var(--line-height-150);
 }
 
 .accordion__answer.open {
@@ -222,7 +225,7 @@ main {
 }
 
 @media screen and (min-width: 600px) {
-  .container {
+  .image-container {
     height: 20rem;
   }
 
@@ -238,5 +241,36 @@ main {
     position: absolute;
     top: 0;
     width: 100%;
+  }
+
+  .accordion {
+    box-shadow: 0 1rem 1.5rem 1rem hsla(292, 42%, 14%, 0.05);
+    gap: var(--space-450);
+    padding: var(--space-500);
+  }
+
+  .accordion__list {
+    gap: var(--space-300);
+  }
+
+  .accordion__question {
+    font-size: var(--font-size-225);
+    line-height: var(--line-height-120);
+    width: 100%;
+  }
+
+  .accordion__answer {
+    font-size: var(--font-size-200);
+  }
+
+  .header__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .header__title {
+    font-size: var(--font-size-675);
+    line-height: var(--line-height-120);
+    letter-spacing: var(--letter-spacing-1px);
   }
 }
