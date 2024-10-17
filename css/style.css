@@ -103,11 +103,17 @@ body {
 main {
   align-items: center;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
-  min-height: 100dvh;
-  padding: 0 var(--space-300);
+  padding: 1rem var(--space-300) 0;
   width: 100%;
+}
+
+.main-content {
+  max-height: 100%;
+  overflow-y: auto;
+  z-index: 1;
 }
 
 .accordion {
@@ -150,6 +156,12 @@ main {
 }
 
 .accordion__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
+}
+
+.wrapper {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -158,11 +170,16 @@ main {
 .accordion__question {
   font-weight: 600;
   line-height: var(--line-height-120);
-  max-width: 13.275rem;
+  width: 82%;
 }
 
 .accordion__answer {
+  color: var(--purple-gray);
   display: none;
+}
+
+.accordion__answer.open {
+  display: block;
 }
 
 .accordion__answer.open {
@@ -193,9 +210,9 @@ main {
 
 .attribution {
   bottom: 0;
+  flex-shrink: 0;
   font-size: var(--font-size-175);
   padding: 1rem;
-  position: absolute;
   text-align: center;
 }
 
