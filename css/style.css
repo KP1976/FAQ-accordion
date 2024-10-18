@@ -154,13 +154,17 @@ main {
 .accordion__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-250);
 }
 
 .accordion__item {
   display: flex;
   flex-direction: column;
   gap: 1.5rem 0;
+  padding: var(--space-300) 0;
+}
+
+.accordion__item:not(:last-child) {
+  border-bottom: 1px solid var(--purple-light);
 }
 
 .wrapper {
@@ -207,13 +211,7 @@ main {
   display: none;
 }
 
-.question-divider {
-  background-color: var(--purple-light);
-  height: 1px;
-}
-
 .attribution {
-  bottom: 0;
   flex-shrink: 0;
   font-size: var(--font-size-175);
   padding: 1rem;
@@ -246,12 +244,8 @@ main {
 
   .accordion {
     box-shadow: 0 1rem 1.5rem 1rem hsla(292, 42%, 14%, 0.05);
-    gap: var(--space-450);
-    padding: var(--space-500);
-  }
-
-  .accordion__list {
-    gap: var(--space-300);
+    gap: 0.75rem;
+    padding: var(--space-500) var(--space-500) var(--space-200);
   }
 
   .accordion__question {
